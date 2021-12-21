@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import BannerSection from '../components/home banner/banner.component'
+import CardsComponent from '../components/home cards/cards.component'
+import ChooseDesignComponent from '../components/home chooseDesign/chooseDesign.component'
+import LaunchComponent from '../components/home launch/launch.component'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,8 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1> main</h1>
+      <main >
+        <BannerSection/>
+        <LaunchComponent/>
+        <CardsComponent/>
+        <ChooseDesignComponent/>
         
       </main>
 
