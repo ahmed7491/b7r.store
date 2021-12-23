@@ -14,16 +14,16 @@ export const HeaderContainer = styled.header`
       height: 36px;
       font-size: 14px;
       font-weight: 400;
-      color: rgb(22, 54, 99);
+      color: #163663;
       box-shadow: none;
       
     }
     .btn-2{
-      background-color: rgb(74, 148, 165);
+      background-color: var(--lightBlue);
       width: 142px;
       font-size: 14px;
       color: #fff;
-      border-radius: 3px;
+      border-radius: 4px;
     }
 
 `

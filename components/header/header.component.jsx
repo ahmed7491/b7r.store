@@ -69,7 +69,7 @@ const HeaderComponent = () => {
                           preview={false}
                             width={70}
                             height={31}
-                            src="https://www.b7r.store/static/images/NewUpdatedLogo.svg"
+                            src="/static/Logo.svg"
                           />
                         </Link>
                       </div>

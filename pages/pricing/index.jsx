@@ -1,9 +1,10 @@
 import React from 'react'
+import PricingPageComponent from '../../components/pricing page/pricingPage.component'
 
 const PricingPage = () => {
     return (
         <div>
-            <h1> pricing page</h1>
+            <PricingPageComponent/>
         </div>
     )
 }

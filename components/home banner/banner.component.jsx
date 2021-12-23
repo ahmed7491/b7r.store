@@ -28,10 +28,10 @@ const BannerSection = () => {
               </Button>
             </Space>
           </Col>
-          <Col xl={12}>
+          <Col xl={12} style={{textAlign: 'end'}}>
             <Image
             preview={false}
-              src="https://www.b7r.store/static/images/banner.svg"
+              src="/static/homePage/Group 6150.svg"
               sizes="294"
             />
           </Col>

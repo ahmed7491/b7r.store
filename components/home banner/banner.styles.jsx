@@ -20,7 +20,7 @@ export const BannerContainer = styled.div`
     width: 198px;
     height: 50px;
     font-size: 16px;
-    background-color: rgb(25, 133, 161);
+    background-color: var(--lightBlue);
     border-radius: 3px;
   }
 `;
