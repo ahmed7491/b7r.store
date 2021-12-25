@@ -92,6 +92,7 @@ export const Badge = styled.div`
 
 export const PricingTableContainer = styled.div`
   padding: 33px 0px;
+  padding-bottom: 160px
 
   .g-bestSeller {
     padding: 9px ;
