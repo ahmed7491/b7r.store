@@ -89,25 +89,3 @@ export const Badge = styled.div`
     border-bottom: 12px solid transparent;
   }
 `;
-
-export const PricingTableContainer = styled.div`
-  padding: 33px 0px;
-  padding-bottom: 160px
-
-  .g-bestSeller {
-    padding: 9px ;
-    margin-bottom: 0px;
-    max-width: 230px;
-    transform: translate(230px);
-    background-color: #2cb87a;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .table-section {
-      direction: rtl;
-      text-align: right;
-  }
-`;
