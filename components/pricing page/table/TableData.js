@@ -1,4 +1,4 @@
-import { Typography, Button, Card, Table, Tabs } from "antd";
+import { Typography } from "antd";
 import { CheckOutlined, LineOutlined } from "@ant-design/icons/lib/icons";
 
 const { Title, Text } = Typography;
@@ -7,7 +7,7 @@ const RightCheck = (
   );
 
 const FeatureTitle ={ fontSize: "18px", color: "#4F4F4F", fontWeight: '400',lineHeight:'24px' };
-const TypeTitle = { fontSize: "18px", color: "#163663", fontWeight: '400',lineHeight:'24px' }
+const TypeTitle = { fontSize: "18px", color: "#163663", fontWeight: '400',lineHeight:'24px'}
 
 export const columns = [
   {
@@ -331,7 +331,7 @@ export const data = [
   {
     key: "19",
     features: (
-        <Text style={FeatureTitle}>تصنيفات المنتجات الاساسية )الفرعية و الثانوية (</Text>
+        <Text style={FeatureTitle}>تصنيفات المنتجات الاساسية(الفرعية و الثانوية)</Text>
       ),
     advanced: RightCheck,
     silver: RightCheck,
@@ -340,7 +340,7 @@ export const data = [
   {
     key: "20",
     features: (
-        <Text style={FeatureTitle}>تخصيص مهام المستخدم )فريق العمل(</Text>
+        <Text style={FeatureTitle}>تخصيص مهام المستخدم (فريق العمل)</Text>
       ),
     advanced: RightCheck,
     silver: RightCheck,

@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs, Table, Typography, Row, Col, Space } from "antd";
 import { columns, data } from "../table/TableData";
 import { TabPaneContainer } from "./tabe.styles";
+import { TabsName } from "./tabePaneData";
 
 const { TabPane } = Tabs;
 const { Title, Text } = Typography;
@@ -22,130 +23,73 @@ subHeader.map((index) => index.features);
 const TabePaneComponent = () => {
   return (
     <TabPaneContainer>
-      <Tabs defaultActiveKey="1" direction="rtl" centered={true}>
+      <Tabs defaultActiveKey="1" direction="rtl" tabBarGutter={135} centered={true}>
         <TabPane
-          tab={
-            <Typography style={{ textAlign: "right" }}>
-              <Text
-                style={{
-                  fontWeight: "400",
-                  fontSize: "16px",
-                  lineHeight: "28px",
-                }}
-              >
-                البرونزية
-              </Text>
-              <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
-                <Title
-                  level={4}
-                  style={{
-                    fontWeight: "700",
-                    lineHeight: "28px",
-                    fontSize: "18px",
-                    color: "#37474F",
-                  }}
-                >
-                  249 جنيه
-                </Title>
-                <span
-                  style={{
-                    fontWeight: "400",
-                    lineHeight: "28px",
-                    fontSize: "14px",
-                    color: "#BDBDBD",
-                  }}
-                >
-                  /شهريا
-                </span>
-              </p>
-            </Typography>
-          }
+          tab={TabsName.advanced}
           key="1"
         >
-            {
-                
-            }
-            <Row >
+          <Row align="middle" >
+              <Space size={20} direction="vertical" className="inner-Table">
                 {
                     data.map((index)=> (
-                    <Space key={index.key} size={"large"} direction="vertical" className="inner-Table">
+                    <Space key={index.key} size={15} direction="horizontal" >
 
-                        <Col md={6}>
-                            {index.silver}
+                        <Col>
+                            {index.advanced}
                         </Col>
-                        <Col md={28}>
+                        <Col>
                         {index.features}
                         </Col>
                     </Space>
                     ))
                 }
+                </Space>
             </Row>
         </TabPane>
         <TabPane
-          tab={
-            <Typography style={{ textAlign: "right" }}>
-              <Text>الفضية</Text>
-              <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
-                <Title
-                  level={4}
-                  style={{
-                    fontWeight: "700",
-                    lineHeight: "28px",
-                    fontSize: "18px",
-                    color: "#37474F",
-                  }}
-                >
-                  499 جنيه
-                </Title>
-                <span
-                  style={{
-                    fontWeight: "400",
-                    lineHeight: "28px",
-                    fontSize: "14px",
-                    color: "#BDBDBD",
-                  }}
-                >
-                  /شهريا
-                </span>
-              </p>
-            </Typography>
-          }
-          key="1"
+          tab={TabsName.silver}
+          key="2"
         >
+          <Row align="middle" >
+              <Space size={20} direction="vertical" className="inner-Table">
+                {
+                    data.map((index)=> (
+                    <Space key={index.key} size={15} direction="horizontal" >
+
+                        <Col>
+                            {index.silver}
+                        </Col>
+                        <Col>
+                        {index.features}
+                        </Col>
+                    </Space>
+                    ))
+                }
+                </Space>
+            </Row>
 
         </TabPane>
         <TabPane
-          tab={
-            <Typography style={{ textAlign: "right" }}>
-              <Text>الذهبية</Text>
-              <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
-                <Title
-                  level={4}
-                  style={{
-                    fontWeight: "700",
-                    lineHeight: "28px",
-                    fontSize: "18px",
-                    color: "#37474F",
-                  }}
-                >
-                  1299 جنيه
-                </Title>
-                <span
-                  style={{
-                    fontWeight: "400",
-                    lineHeight: "28px",
-                    fontSize: "14px",
-                    color: "#BDBDBD",
-                  }}
-                >
-                  /شهريا
-                </span>
-              </p>
-            </Typography>
-          }
-          key="1"
+          tab={TabsName.gold}
+          key="3"
         >
+          <Row align="middle" >
+              <Space size={20} direction="vertical" className="inner-Table">
+                {
+                    data.map((index)=> (
+                    <Space key={index.key} size={15} direction="horizontal" >
 
+                        <Col>
+                            {index.gold}
+                        </Col>
+                        <Col>
+                        {index.features}
+                        </Col>
+                    </Space>
+                    ))
+                }
+                </Space>
+            </Row>
         </TabPane>
       </Tabs>
     </TabPaneContainer>
