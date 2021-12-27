@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Row_Container } from "../../styles/parents.styles";
 import {
@@ -13,17 +13,22 @@ import TableIndexComponent from "./table/table.component";
 import TabePaneComponent from "./tabePane/tabe.component";
 
 const { Title, Text } = Typography;
-class PricingPageComponent extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      existViewPort: null,
+const PricingPageComponent = () =>  {
+ 
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
     };
-  }
-  componentDidMount() {
-    this.setState({ existViewPort: window.innerWidth });
-  }
-  render() {
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+  }, []);
+  
     return (
       <PricingPageContainer>
         <TopBanner>
@@ -113,7 +118,7 @@ class PricingPageComponent extends React.Component {
         </Row_Container>
 
         <Row_Container>
-          {this.state.existViewPort > 992 ? (
+          {width > 992 ? (
             <TableIndexComponent />
           ) : (
             <TabePaneComponent />
@@ -121,7 +126,7 @@ class PricingPageComponent extends React.Component {
         </Row_Container>
       </PricingPageContainer>
     );
-  }
+  
 }
 
 export default PricingPageComponent;
