@@ -1,8 +1,9 @@
 import React from "react";
-import { Tabs, Table, Typography, Row, Col, Space } from "antd";
+import { Tabs, Table, Typography, Row, Col, Space, Affix } from "antd";
 import { columns, data } from "../table/TableData";
 import { TabPaneContainer } from "./tabe.styles";
-import { TabsName } from "./tabePaneData";
+import { TabsData, TabsName } from "./tabePaneData";
+import { StickyContainer, Sticky } from 'react-sticky';
 
 const { TabPane } = Tabs;
 const { Title, Text } = Typography;
@@ -21,23 +22,32 @@ subHeader.map((index) => index.features);
 // index.features.props.children)
 
 const TabePaneComponent = () => {
+  const renderTabBar = (props, DefaultTabBar) => (
+    <Sticky bottomOffset={80}>
+      {({ style }) => (
+        <DefaultTabBar {...props} className="site-custom-tab-bar" style={{ ...style }} />
+      )}
+    </Sticky>
+  );
   return (
     <TabPaneContainer>
-      <Tabs defaultActiveKey="1" direction="rtl" tabBarGutter={135} centered={true}>
+   <StickyContainer>
+      <Tabs defaultActiveKey="1" direction="rtl"  renderTabBar={renderTabBar} centered={true} animated={true}>
         <TabPane
-          tab={TabsName.advanced}
+          tab={ TabsName.advanced}
           key="1"
+          
         >
           <Row align="middle" >
               <Space size={20} direction="vertical" className="inner-Table">
                 {
-                    data.map((index)=> (
-                    <Space key={index.key} size={15} direction="horizontal" >
+                    TabsData.map((index)=> (
+                    <Space key={index.key} size={15} direction="horizontal"  >
 
                         <Col>
                             {index.advanced}
                         </Col>
-                        <Col>
+                        <Col style={{marginRight:'15px'}}>
                         {index.features}
                         </Col>
                     </Space>
@@ -59,7 +69,7 @@ const TabePaneComponent = () => {
                         <Col>
                             {index.silver}
                         </Col>
-                        <Col>
+                        <Col style={{marginRight:'15px'}}> 
                         {index.features}
                         </Col>
                     </Space>
@@ -82,7 +92,7 @@ const TabePaneComponent = () => {
                         <Col>
                             {index.gold}
                         </Col>
-                        <Col>
+                        <Col style={{marginRight:'15px'}}>
                         {index.features}
                         </Col>
                     </Space>
@@ -92,6 +102,7 @@ const TabePaneComponent = () => {
             </Row>
         </TabPane>
       </Tabs>
+      </StickyContainer>
     </TabPaneContainer>
   );
 };

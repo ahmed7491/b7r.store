@@ -4,6 +4,8 @@ import { Typography, Table, Tabs } from "antd";
 import { columns, data } from "./TableData";
 import { PricingTableContainer } from "./table.styles";
 
+const { Text } =Typography;
+
 const TableIndexComponent = () => {
   return (
     <PricingTableContainer>
@@ -16,6 +18,7 @@ const TableIndexComponent = () => {
         columns={columns}
         dataSource={data}
       />
+      
     </PricingTableContainer>
   );
 };

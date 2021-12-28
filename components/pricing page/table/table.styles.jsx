@@ -16,6 +16,7 @@ padding-bottom: 160px;
   color: #fff;
 }
 
+
 .silver-Row {
   border-right: 1px solid #2CB87A;
   background-color: #fff;
@@ -46,6 +47,7 @@ padding-bottom: 160px;
     border-bottom: 1px solid #E0E0E0;
    
 }
+
 /* .ant-table{
   font-size: 18px;
     font-weight: 400;

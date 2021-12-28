@@ -11,23 +11,41 @@ import { Row, Col, Space, Typography, Button } from "antd";
 
 import TableIndexComponent from "./table/table.component";
 import TabePaneComponent from "./tabePane/tabe.component";
-
+function useWindowResize(callback) {
+  useEffect(() => {
+    callback();
+    window.addEventListener("resize", callback);
+    return () => {
+      window.removeEventListener("resize", () => {
+        console.log("event removed");
+      });
+    };
+  }, []);
+}
 const { Title, Text } = Typography;
 const PricingPageComponent = () =>  {
  
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(true);
+  const featureTableCallback = () => {
+    if (window.innerWidth > 992) {
+      setWidth(true);
+    } else {
+      setWidth(false);
+    }
+  };
+  useWindowResize(featureTableCallback)
+  // useEffect(() => {
+  //   const updateWindowDimensions = () => {
+  //     const newWidth = window.innerWidth;
+  //     console.log("🚀 ~ file: pricingPage.component.jsx ~ line 24 ~ updateWindowDimensions ~ newWidth", newWidth)
+  //     setWidth(newWidth);
+  //   };
 
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      const newWidth = window.innerWidth;
-      setWidth(newWidth);
-    };
+  //   window.addEventListener("resize", updateWindowDimensions);
 
-    window.addEventListener("resize", updateWindowDimensions);
+  //   return () => window.removeEventListener("resize", updateWindowDimensions) 
 
-    return () => window.removeEventListener("resize", updateWindowDimensions) 
-
-  }, []);
+  // }, []);
   
     return (
       <PricingPageContainer>
@@ -118,10 +136,10 @@ const PricingPageComponent = () =>  {
         </Row_Container>
 
         <Row_Container>
-          {width > 992 ? (
+          {width ? (
             <TableIndexComponent />
           ) : (
-            <TabePaneComponent />
+            <TabePaneComponent/>
           )}
         </Row_Container>
       </PricingPageContainer>

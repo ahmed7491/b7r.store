@@ -1,5 +1,9 @@
 import { Typography } from "antd";
 import { CheckOutlined, LineOutlined } from "@ant-design/icons/lib/icons";
+import { PRICE_DATA } from "../../../locales/ar/price";
+import { renderData } from "../switchRenderData";
+
+
 
 const { Title, Text } = Typography;
 const RightCheck = (
@@ -172,460 +176,460 @@ export const columns = [
 export const data = [
   {
     key: "1",
-    colSpan: "4",
+    colSpan: 4,
     features: (
-      <Text style={{ fontSize: "20px", color: "#1985A1" }}>خصائص المتجر الأساسية</Text>
+      <Text style={{ fontSize: "20px", color: "#1985A1" }}> {PRICE_DATA.shopFeature} </Text>
     ),
   },
   {
     key: "2",
     features: (
-        <Text style={FeatureTitle}>متجر إلكتروني احترافي</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.proWebsite}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "3",
     features: (
-        <Text style={FeatureTitle}>تعدد لغات المتجر</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.multiLang}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "4",
     features: (
-        <Text style={FeatureTitle}>تعدد العملات بالمتجر</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.multiCurrency}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "5",
     features: (
-        <Text style={FeatureTitle}>تكامل الدفع والشحن</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.compeletPayment}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "6",
     features: (
-        <Text style={FeatureTitle}>عدد المنتجات غير محدود</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.unlimetedProducts}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "7",
     features: (
-        <Text style={FeatureTitle}>عدد المستخدمين فريق العمل</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.crowNumber}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>2</Text>),
-    silver: (<Text style={TypeTitle}>5</Text>),
-    gold: (<Text style={TypeTitle}>غير محدود</Text>),
+    advanced: renderData("text","2"),
+    silver: renderData("text","5"),
+    gold: renderData("text",PRICE_DATA.UNLIMITED),
   },
   {
     key: "8",
     features: (
-        <Text style={FeatureTitle}>كوبونات الخصم</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.discount}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "9",
     features: (
-        <Text style={FeatureTitle}>تقارير المتجر</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.shopReports}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "10",
     features: (
-        <Text style={FeatureTitle}>إدارة المخزون</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.storeManegment}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "11",
     features: (
-        <Text style={FeatureTitle}>عدد الفروع او المخازن</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.storeNumber}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>4</Text>),
-    silver: (<Text style={TypeTitle}>12</Text>),
-    gold: (<Text style={TypeTitle}>غير محدود</Text>),
+    advanced: renderData("text","4"),
+    silver: renderData("text","12"),
+    gold: renderData("text",PRICE_DATA.UNLIMITED),
   },
   {
     key: "12",
     features: (
-        <Text style={FeatureTitle}>ربط المتجر بالدومين الخاص بك</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.linkWithDomain}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "13",
     features: (
-        <Text style={FeatureTitle}>شهادة SSL مجانية (Https)</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.SSLCertify}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "14",
     features: (
-        <Text style={FeatureTitle}>قائمة المنتجات المفضلة لحفظ المنتجات المختارة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.FavList}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "15",
     features: (
-        <Text style={FeatureTitle}>إدارة تقييمات المنتج والمراجعات</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.reviewManagement}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "16",
     features: (
-        <Text style={FeatureTitle}>تعديل التصميم / استخدام أكثر من قالب</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.changeDesign}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>4</Text>),
-    silver: (<Text style={TypeTitle}>12</Text>),
-    gold: (<Text style={TypeTitle}>غير محدود</Text>),
+    advanced: renderData("text","4"),
+    silver: renderData("text","12"),
+    gold: renderData("text",PRICE_DATA.UNLIMITED),
   },
   {
     key: "17",
     features: (
-        <Text style={FeatureTitle}>طباعة فاتورة الطلب</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.printBills}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "18",
     colSpan: "4",
     features: (
-      <Text style={{ fontSize: "20px", color: "#1985A1" }}>خصائص المتجر المتقدمة</Text>
+      <Text style={{ fontSize: "20px", color: "#1985A1" }}>{PRICE_DATA.advancedOption}</Text>
     ),
   },
   {
     key: "19",
     features: (
-        <Text style={FeatureTitle}>تصنيفات المنتجات الاساسية(الفرعية و الثانوية)</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.specifyProducts}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "20",
     features: (
-        <Text style={FeatureTitle}>تخصيص مهام المستخدم (فريق العمل)</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.specifyUsers}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "21",
     features: (
-        <Text style={FeatureTitle}>تخصيص سير الطلب</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.specifyOrder}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "22",
     features: (
-        <Text style={FeatureTitle}>تصدير واستيراد المنتجات بملف إكسيل</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.importAndExportProducts}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "23",
     features: (
-        <Text style={FeatureTitle}>دعم الخيارات المتعدده للمنتج</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.multiChoicesSupport}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "24",
     features: (
-        <Text style={FeatureTitle}>فلاتر المنتجات المتقدمة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.productsFiltering}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "25",
     features: (
-        <Text style={FeatureTitle}>الشات والدردشة المباشرة مع العملاء</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.customersChatting}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "26",
     features: (
-        <Text style={FeatureTitle}>المدونة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.enclobidia}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "27",
     features: (
-        <Text style={FeatureTitle}>مجموعات العملاء</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.customersGroup}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>5 مجموعات</Text>),
-    silver: (<Text style={TypeTitle}>10 مجموعات</Text>),
-    gold: (<Text style={TypeTitle}>غير محدود</Text>),
+    advanced: renderData("text","5 مجموعات"),
+    silver:  renderData("text","10 مجموعات"),
+    gold: renderData("text",PRICE_DATA.UNLIMITED),
   },
   {
     key: "28",
     features: (
-        <Text style={FeatureTitle}>إنشاء صفحات اضافية</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.additionalPages}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "29",
     features: (
-        <Text style={FeatureTitle}>تهيئة المتجر لمحركات البحث وعناوين URL صديقة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.friendlyURL}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "30",
     features: (
-        <Text style={FeatureTitle}>قبول الطلبات حسب منطقة الشحن</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.acceptOrders}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "31",
     features: (
-        <Text style={FeatureTitle}>امكانية الشراء كضيف بدون تسجيل</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.buyWithoutLogin}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "32",
     colSpan: "4",
     features: (
-      <Text style={{ fontSize: "20px", color: "#1985A1" }}>أدوات التسويق</Text>
+      <Text style={{ fontSize: "20px", color: "#1985A1" }}>{PRICE_DATA.shoppingTools}</Text>
     ),
   },
   {
     key: "33",
     features: (
-        <Text style={FeatureTitle}>ربط المتجر بفيسبوك بيكسل Facebook Pixel</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.facebookPixel}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "34",
     features: (
-        <Text style={FeatureTitle}>بط المتجر بتحليلات جوجل Google Analytics</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.googleAnalystic}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "35",
     features: (
-        <Text style={FeatureTitle}>البيع على فيسبوك وانستجرام Facebook Shop</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.facebookShopping}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "36",
     features: (
-        <Text style={FeatureTitle}>نظام استرداد سلة التسوق المتروكة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.getBackShopBin}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "37",
     features: (
-        <Text style={FeatureTitle}>الرسائل الإخبارية وحملات البريد الإلكتروني</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.emailsAndNewsReports}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "38",
     features: (
-        <Text style={FeatureTitle}>تطبيق الرسائل القصيرة SMS</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.SMSApp}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "39",
     features: (
-        <Text style={FeatureTitle}>قسائم الهدايا</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.giftsSection}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "40",
     features: (
-        <Text style={FeatureTitle}>ربط المتجر بــ Google Tag Manager</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.googleTagManager}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("false"),
+    gold: renderData("true"),
   },
   {
     key: "41",
     features: (
-        <Text style={FeatureTitle}>كوبونات الخصم المتقدمة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.specialDiscountCOBON}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("false"),
+    gold: renderData("true"),
   },
   {
     key: "42",
     features: (
-        <Text style={FeatureTitle}>التسويق بإستخدام تطبيق النوافذ المنبثقة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.shoppingWithTargetPages}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("false"),
+    gold: renderData("true"),
   },
   {
     key: "43",
     features: (
-        <Text style={FeatureTitle}>تقسيم العملاء لمجموعات متقدمة</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.slicingCustomers}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("false"),
+    gold: renderData("true"),
   },
   {
     key: "44",
     colSpan: "4",
     features: (
-      <Text style={{ fontSize: "20px", color: "#1985A1" }}>الخدمات</Text>
+      <Text style={{ fontSize: "20px", color: "#1985A1" }}>{PRICE_DATA.services}</Text>
     ),
   },
   {
     key: "45",
     features: (
-        <Text style={FeatureTitle}>مساعدة شخصية في التسويق</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.shoppingSupport}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>عند الطلب</Text>),
-    silver: (<Text style={TypeTitle}>عند الطلب</Text>),
-    gold: (<Text style={TypeTitle}>عند الطلب</Text>),
+    advanced: renderData("text",PRICE_DATA.INORDER),
+    silver: renderData("text",PRICE_DATA.INORDER),
+    gold: renderData("text",PRICE_DATA.INORDER),
   },
   {
     key: "46",
     features: (
-        <Text style={FeatureTitle}>إدارة الحملات التسويقية</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.marketingManagment}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>عند الطلب</Text>),
-    silver: (<Text style={TypeTitle}>عند الطلب</Text>),
-    gold: (<Text style={TypeTitle}>عند الطلب</Text>),
+    advanced: renderData("text",PRICE_DATA.INORDER),
+    silver: renderData("text",PRICE_DATA.INORDER),
+    gold: renderData("text",PRICE_DATA.INORDER),
   },
   {
     key: "47",
     features: (
-        <Text style={FeatureTitle}>إدارة وسائل التواصل الإجتماعي</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.socialMediaManagment}</Text>
       ),
-    advanced: (<Text style={TypeTitle}>عند الطلب</Text>),
-    silver: (<Text style={TypeTitle}>عند الطلب</Text>),
-    gold: (<Text style={TypeTitle}>عند الطلب</Text>),
+    advanced: renderData("text",PRICE_DATA.INORDER),
+    silver: renderData("text",PRICE_DATA.INORDER),
+    gold: renderData("text",PRICE_DATA.INORDER),
   },
   {
     key: "48",
     colSpan: "4",
     features: (
-      <Text style={{ fontSize: "20px", color: "#1985A1" }}>الدعم</Text>
+      <Text style={{ fontSize: "20px", color: "#1985A1" }}>{PRICE_DATA.support}</Text>
     ),
   },
   {
     key: "49",
     features: (
-        <Text style={FeatureTitle}>الدعم من خلال الشات / الدردشة او الواتساب</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.chattingAndWhatsAppSupport}</Text>
       ),
-    advanced: RightCheck,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("true"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "50",
     features: (
-        <Text style={FeatureTitle}>الدعم من خلال التيلفون</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.phoneSupport}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "51",
     features: (
-        <Text style={FeatureTitle}>أولوية الدعم</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.supportPeriority}</Text>
       ),
-    advanced: <LineOutlined style={{ color: "#828282", fontSize: "16px" }} />,
-    silver: RightCheck,
-    gold: RightCheck,
+    advanced: renderData("false"),
+    silver: renderData("true"),
+    gold: renderData("true"),
   },
   {
     key: "52",
     features: (
-        <Text style={FeatureTitle}>جاهز للاشتراك؟</Text>
+        <Text style={FeatureTitle}>{PRICE_DATA.readyToEnroll}</Text>
       ),
-    advanced: <a> ابدا تجربتك المجانيه </a>,
-    silver: <a> اشترك الان</a>,
-    gold: <a> اشترك الان</a>,
+    advanced: <a>{PRICE_DATA.startExpriment}</a>,
+    silver: <a>{PRICE_DATA.enrollNow}</a>,
+    gold: <a>{PRICE_DATA.enrollNow}</a>,
   },
 ];
