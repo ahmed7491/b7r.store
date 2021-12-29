@@ -47,11 +47,8 @@ padding-bottom: 160px;
     border-bottom: 1px solid #E0E0E0;
    
 }
+.table-row-light > :first-child {
+  background-color: #E1F5FA;
+}
 
-/* .ant-table{
-  font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #4F4F4F;
-} */
 `;

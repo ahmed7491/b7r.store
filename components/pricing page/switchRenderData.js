@@ -29,7 +29,7 @@ export const renderData = (support, text) => {
       );
 
     case "text":
-      return <Text style={featureNumber}>{text}</Text>;
+      return <Text className='feature-number'>{text}</Text>;
 
     default:
       return <Text>none</Text>;

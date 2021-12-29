@@ -9,6 +9,55 @@ export const PricingPageContainer = styled.div`
     font-size: 18px;
     font-weight: 700;
   }
+  .feature-number{
+    font-size: 18px;
+    color: #163663;
+    font-weight: 400;
+    line-height: 24px;
+    padding-right: 12px;
+    @media screen and (max-width: 426px){
+      font-size: 16px;
+      padding-right: 15px;
+    }
+    @media screen and (max-width: 320px){
+      padding-right: 9px;
+      margin-left: 5px;
+    }
+
+  }
+  .featureSection-header{
+    font-size: 24px;
+    color: #1985A1;
+    font-weight: 600;
+    padding: 12px 0px;
+    @media screen and (max-width: 320px){
+      font-size: 18px;
+    }
+  }
+  .featureSection-header-table{
+    font-size: 20px;
+    color: #1985A1; 
+  }
+  .feature-title{
+    font-size: 18px;
+    color: #4F4F4F;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+    }
+    @media screen and (max-width: 426px){
+      font-size: 14px;
+    }
+    @media screen and (max-width: 375px){
+      font-size: 12px;
+    }
+  }
+
+  .bestSeller-card{
+  border: 1.5px solid #2CB87A;
+}
 `;
 
 export const TopBanner = styled.div`
@@ -17,10 +66,24 @@ export const TopBanner = styled.div`
   padding: 65px 0px;
   background-color: #eaf5ff;
 
+  .upper-header{
+    color: #37474F;
+    font-weight: 600;
+    @media screen and (max-width: 768px){
+      font-size: 24px;
+    }
+    @media screen and (max-width: 376px){
+      font-size: 22px;
+    }
+  }
   .upper-description {
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
     color: #4f4f4f;
+    @media screen and (max-width: 426px){
+      font-size: 14px;
+    }
   }
   .btn-1 {
     width: 229px;
@@ -28,6 +91,13 @@ export const TopBanner = styled.div`
     border-radius: 4px;
     background-color: var(--lightBlue);
     font-size: 20px;
+    @media screen and (max-width: 768px){
+      width: 215px;
+    }
+    @media screen and (max-width: 376px){
+      width: 169px;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -44,6 +114,15 @@ export const PricingCard = styled.div`
     align-items: center;
     color: var(--darkBlue);
   }
+  .card-price{
+    font-size: 38px;
+    line-height: 48px;
+    color: #37474F;
+    font-weight: 700;
+    @media screen and (max-width: 376px){
+      font-size: 34px;
+    }
+  }
   .duration-pay {
     font-size: 22px;
     line-height: 24px;
@@ -56,6 +135,8 @@ export const PricingCard = styled.div`
     font-weight: 400;
     color: #828282;
   }
+
+ 
 `;
 
 export const Badge = styled.div`

@@ -3,6 +3,48 @@ import styled from "styled-components";
 export const TabPaneContainer = styled.div`
 padding: 75px 0px;
 
+.tabName-type{
+    font-size: 18px;
+    color: #4F4F4F;
+    @media screen and (max-width: 426px){
+        font-size: 16px;
+    }
+    
+}
+
+.tabName-description{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    .price{
+        font-weight: 700;
+        line-height: 28px;
+        font-size: 18px;
+        color: #163663;
+        @media screen and (max-width: 426px){
+            font-size: 16px;
+        }
+        @media screen and (max-width: 376px){
+            font-size: 12px;
+        }
+        @media screen and (max-width: 321px){
+            min-width: 10px;
+        }
+    }
+
+    .monthly{
+        font-weight: 400;
+        line-height: 28px;
+        font-size: 14px;
+        color: #BDBDBD;
+        @media screen and (max-width: 426px){
+            font-size: 12px;
+        }
+    }
+}
+
+
 .ant-tabs-nav{
     position: sticky;
     z-index: 1;
@@ -11,11 +53,20 @@ padding: 75px 0px;
     width: 100%;
     background-color: #fff;
 }
- 
+
+.tab-tail{
+    display: flex;
+    margin: 16px 0px;
+    justify-content: space-evenly;
+}
 
     .inner-Table{
         text-align: start;
-        padding: 0px 30px;
+        padding-left: 30px;
+        /* :first-child{
+            color: orange;
+            background-color: red;
+        } */
         @media screen and (max-width: 768px){
             min-width: 735px;
         }

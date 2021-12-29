@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Typography, Table, Tabs } from "antd";
-import { columns, data } from "./TableData";
+import { colHeadersNumbers, columns, data } from "./TableData";
 import { PricingTableContainer } from "./table.styles";
 
 const { Text } =Typography;
@@ -13,6 +13,7 @@ const TableIndexComponent = () => {
         align="right"
         pagination={false}
         bordered={false}
+        rowClassName={(record, index) => colHeadersNumbers.includes(index) ? 'table-row-light' :  'table-row-default'}
         className="table-section"
         scroll={{ x: 1000 }}
         columns={columns}

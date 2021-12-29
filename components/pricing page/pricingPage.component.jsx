@@ -34,26 +34,13 @@ const PricingPageComponent = () =>  {
     }
   };
   useWindowResize(featureTableCallback)
-  // useEffect(() => {
-  //   const updateWindowDimensions = () => {
-  //     const newWidth = window.innerWidth;
-  //     console.log("🚀 ~ file: pricingPage.component.jsx ~ line 24 ~ updateWindowDimensions ~ newWidth", newWidth)
-  //     setWidth(newWidth);
-  //   };
-
-  //   window.addEventListener("resize", updateWindowDimensions);
-
-  //   return () => window.removeEventListener("resize", updateWindowDimensions) 
-
-  // }, []);
-  
     return (
       <PricingPageContainer>
         <TopBanner>
           <Row_Container>
             <Space direction="vertical" size={19}>
               <Typography>
-                <Title level={1}>انشئ متجرك الان وزود مبيعاتك مع بحر</Title>
+                <Title className="upper-header" level={1}>انشئ متجرك الان وزود مبيعاتك مع بحر</Title>
                 <Title className="upper-description">
                   مجاناً لمدة 14 يوم بدون الحاجة إلى تفاصيل بطاقة الائتمان
                 </Title>
@@ -68,31 +55,31 @@ const PricingPageComponent = () =>  {
           <Row
             gutter={[30, 30]}
             justify="center"
-            style={{ marginBottom: "64px" }}
+            style={{ marginBottom: "64px" ,direction:"rtl"}}
           >
-            <Col>
+            <Col lg={8} md={14}>
               <PricingCard>
                 <Space direction="vertical" size={"middle"}>
                   <Typography className="header">
-                    <Title level={1}>1299 جنيه </Title>
+                    <Title className="card-price" level={1}>249 جنيه</Title>
                     <span className="duration-pay">/شهريا</span>
                   </Typography>
                   <Typography style={{ textAlign: "right" }}>
-                    <Title level={3} style={{ color: "#FFA412" }}>
-                      الذهبية
+                    <Title level={4} style={{ color: "#1985A1" }}>
+                      البرونزية
                     </Title>
                     <p className="description">
-                      انت جاهز لمواكبة التوسع في اعمالك التجارية
+                      انت جاهز لنقل نشاطك التجاري باستخدام متجر الكتروني احترافي
                     </p>
                   </Typography>
                 </Space>
               </PricingCard>
             </Col>
-            <Col>
-              <PricingCard>
+            <Col lg={8} md={14}>
+              <PricingCard className="bestSeller-card">
                 <Space direction="vertical" size={"middle"}>
                   <Typography className="header">
-                    <Title level={1}>1299 جنيه </Title>
+                    <Title className="card-price" level={1}>499 جنيه</Title>
                     <span className="duration-pay">/شهريا</span>
                   </Typography>
                   <Typography style={{ textAlign: "right" }}>
@@ -110,24 +97,25 @@ const PricingPageComponent = () =>  {
                 </Space>
               </PricingCard>
             </Col>
-            <Col>
+            <Col lg={8} md={14}>
               <PricingCard>
                 <Space direction="vertical" size={"middle"}>
                   <Typography className="header">
-                    <Title level={1}>1299 جنيه </Title>
+                    <Title className="card-price" level={1}>1299 جنيه </Title>
                     <span className="duration-pay">/شهريا</span>
                   </Typography>
                   <Typography style={{ textAlign: "right" }}>
-                    <Title level={4} style={{ color: "#1985A1" }}>
-                      البرونزية
+                    <Title level={3} style={{ color: "#FFA412" }}>
+                      الذهبية
                     </Title>
                     <p className="description">
-                      انت جاهز لنقل نشاطك التجاري باستخدام متجر الكتروني احترافي
+                      انت جاهز لمواكبة التوسع في اعمالك التجارية
                     </p>
                   </Typography>
                 </Space>
               </PricingCard>
             </Col>
+            
           </Row>
           <Button type="ghost" className="btn-2">
             {" "}
