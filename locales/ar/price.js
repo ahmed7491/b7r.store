@@ -32,7 +32,7 @@ export const PRICE_DATA = {
   buyWithoutLogin: "امكانية الشراء كضيف بدون تسجيل",
   shoppingTools: "أدوات التسويق",
   facebookPixel: "ربط المتجر بفيسبوك بيكسل Facebook Pixel",
-  googleAnalystic : "بط المتجر بتحليلات جوجل Google Analytics",
+  googleAnalystic : "ربط المتجر بتحليلات جوجل Google Analytics",
   facebookShopping: "البيع على فيسبوك وانستجرام Facebook Shop",
   getBackShopBin: "نظام استرداد سلة التسوق المتروكة",
   emailsAndNewsReports: "الرسائل الإخبارية وحملات البريد الإلكتروني",

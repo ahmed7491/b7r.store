@@ -9,6 +9,17 @@ export const PricingPageContainer = styled.div`
     font-size: 18px;
     font-weight: 700;
   }
+
+  .monthly{
+        font-weight: 400;
+        line-height: 28px;
+        font-size: 14px;
+        margin-bottom: 9px;
+        color: #BDBDBD;
+        @media screen and (max-width: 426px){
+            font-size: 12px;
+        }
+    }
   .feature-number{
     font-size: 18px;
     color: #163663;
@@ -127,6 +138,7 @@ export const PricingCard = styled.div`
     font-size: 22px;
     line-height: 24px;
     color: #bdbdbd;
+    margin-bottom: 9px;
   }
   .description {
     max-width: 280px;

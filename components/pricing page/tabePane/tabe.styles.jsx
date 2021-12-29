@@ -16,6 +16,7 @@ padding: 75px 0px;
     display: flex;
     align-items: center;
     gap: 2px;
+    margin-bottom: 0px;
 
     .price{
         font-weight: 700;
@@ -33,15 +34,7 @@ padding: 75px 0px;
         }
     }
 
-    .monthly{
-        font-weight: 400;
-        line-height: 28px;
-        font-size: 14px;
-        color: #BDBDBD;
-        @media screen and (max-width: 426px){
-            font-size: 12px;
-        }
-    }
+    
 }
 
 
@@ -52,6 +45,10 @@ padding: 75px 0px;
     padding: 0;
     width: 100%;
     background-color: #fff;
+}
+
+.ant-tabs-tab{
+    padding: 0px;
 }
 
 .tab-tail{

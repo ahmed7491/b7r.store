@@ -65,12 +65,7 @@ export const columns = [
                 249 جنيه
               </Title>
               <span
-                style={{
-                  fontWeight: "400",
-                  lineHeight: "28px",
-                  fontSize: "14px",
-                  color: "#BDBDBD",
-                }}
+                className="monthly"
               >
                 /شهريا
               </span>
@@ -118,12 +113,7 @@ export const columns = [
                 499 جنيه
               </Title>
               <span
-                style={{
-                  fontWeight: "400",
-                  lineHeight: "28px",
-                  fontSize: "14px",
-                  color: "#BDBDBD",
-                }}
+                className="monthly"
               >
                 /شهريا
               </span>
@@ -160,12 +150,7 @@ export const columns = [
                 1299 جنيه
               </Title>
               <span
-                style={{
-                  fontWeight: "400",
-                  lineHeight: "28px",
-                  fontSize: "14px",
-                  color: "#BDBDBD",
-                }}
+                className="monthly"
               >
                 /شهريا
               </span>

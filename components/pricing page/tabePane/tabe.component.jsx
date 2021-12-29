@@ -54,8 +54,8 @@ const TabePaneComponent = () => {
           <TabPane tab={TabsName.silver} key="2">
             <Row align="middle">
               <Space size={20} direction="vertical" className="inner-Table">
-                {data.map((index) => (
-                  <Space key={index.key} size={15} direction="horizontal">
+                {newData.map((index,i) => (
+                  <Space key={index.key} style={colHeadersNumbers.includes(i)&& {backgroundColor:"#E1F5FA",width:"100%",padding:"15px 0px"}} size={15} direction="horizontal">
                     <Col>
                       { index.silverTab || index.silver}
                     </Col>
@@ -74,8 +74,8 @@ const TabePaneComponent = () => {
           <TabPane tab={TabsName.gold} key="3">
             <Row align="middle">
               <Space size={20} direction="vertical" className="inner-Table">
-                {data.map((index) => (
-                  <Space key={index.key} size={15} direction="horizontal">
+                {newData.map((index,i) => (
+                  <Space key={index.key} style={colHeadersNumbers.includes(i)&& {backgroundColor:"#E1F5FA",width:"100%",padding:"15px 0px"}} size={15} direction="horizontal">
                     <Col>{ index.goldTab || index.gold}</Col>
                     <Col style={{ marginRight: "15px" }}>
                       { index.featuresTab || index.features}
