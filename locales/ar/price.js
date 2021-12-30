@@ -55,6 +55,7 @@ export const PRICE_DATA = {
   enrollNow: "اشترك الان",
   UNLIMITED: "غير محدود",
   INORDER: "عند الطلب",
+  comparepricing: "مقارنة خطط الأسعار"
 
 
 }

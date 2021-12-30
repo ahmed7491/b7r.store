@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { Breakpoints } from "../../../constants/index"
 
 export const TabPaneContainer = styled.div`
 padding: 75px 0px;
 
 .tabName-type{
     font-size: 18px;
-    color: #4F4F4F;
+    color: ${(props) => props.theme.colors.Gray2};
     @media screen and (max-width: 426px){
         font-size: 16px;
     }
@@ -22,7 +23,7 @@ padding: 75px 0px;
         font-weight: 700;
         line-height: 28px;
         font-size: 18px;
-        color: #163663;
+        color: ${(props) => props.theme.customColors.dark};
         @media screen and (max-width: 426px){
             font-size: 16px;
         }
@@ -44,7 +45,7 @@ padding: 75px 0px;
     top: 0;
     padding: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.customColors.white};
 }
 
 .ant-tabs-tab{
@@ -60,11 +61,7 @@ padding: 75px 0px;
     .inner-Table{
         text-align: start;
         padding-left: 30px;
-        /* :first-child{
-            color: orange;
-            background-color: red;
-        } */
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: ${Breakpoints.md}){
             min-width: 735px;
         }
         @media screen and (max-width: 426px){

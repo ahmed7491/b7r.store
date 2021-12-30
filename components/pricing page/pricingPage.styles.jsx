@@ -1,13 +1,19 @@
 import styled from "styled-components";
+import { Breakpoints } from "../../constants/index"
 
 export const PricingPageContainer = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.customColors.white};
+  direction: rtl;
   text-align: center;
   .btn-2 {
-    color: #1985a1;
+    color: ${(props) => props.theme.colors.skyBlue};
     border: none;
+    align-items: center;
     font-size: 18px;
     font-weight: 700;
+    .plus-minus{
+      margin: 8px;
+    }
   }
 
   .monthly{
@@ -15,22 +21,22 @@ export const PricingPageContainer = styled.div`
         line-height: 28px;
         font-size: 14px;
         margin-bottom: 9px;
-        color: #BDBDBD;
-        @media screen and (max-width: 426px){
+        color: ${(props) => props.theme.colors.Gray6};
+        @media screen and (max-width: ${Breakpoints.sm}){
             font-size: 12px;
         }
     }
   .feature-number{
     font-size: 18px;
-    color: #163663;
+    color: ${(props) => props.theme.customColors.primary};
     font-weight: 400;
     line-height: 24px;
     padding-right: 12px;
-    @media screen and (max-width: 426px){
+    @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 16px;
       padding-right: 15px;
     }
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: ${Breakpoints.xs}){
       padding-right: 9px;
       margin-left: 5px;
     }
@@ -38,27 +44,27 @@ export const PricingPageContainer = styled.div`
   }
   .featureSection-header{
     font-size: 24px;
-    color: #1985A1;
+    color: ${(props) => props.theme.colors.skyBlue};
     font-weight: 600;
     padding: 12px 0px;
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: ${Breakpoints.xs}){
       font-size: 18px;
     }
   }
   .featureSection-header-table{
     font-size: 20px;
-    color: #1985A1; 
+    color: ${(props) => props.theme.colors.skyBlue};
   }
   .feature-title{
     font-size: 18px;
-    color: #4F4F4F;
+    color: ${(props) => props.theme.colors.Gray2};
     font-weight: 400;
     line-height: 24px;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: ${Breakpoints.md}){
       font-size: 16px;
     }
-    @media screen and (max-width: 426px){
+    @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 14px;
     }
     @media screen and (max-width: 375px){
@@ -67,7 +73,7 @@ export const PricingPageContainer = styled.div`
   }
 
   .bestSeller-card{
-  border: 1.5px solid #2CB87A;
+  border: 1.5px solid ${(props) => props.theme.colors.Green};
 }
 `;
 
@@ -75,15 +81,15 @@ export const TopBanner = styled.div`
   text-align: center;
   margin-bottom: 64px;
   padding: 65px 0px;
-  background-color: #eaf5ff;
+  background-color: ${(props) => props.theme.backgroundColors.lightBlue};
 
   .upper-header{
-    color: #37474F;
+    color: ${(props) => props.theme.customColors.dark};
     font-weight: 600;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: ${Breakpoints.md}){
       font-size: 24px;
     }
-    @media screen and (max-width: 376px){
+    @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 22px;
     }
   }
@@ -91,8 +97,8 @@ export const TopBanner = styled.div`
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: #4f4f4f;
-    @media screen and (max-width: 426px){
+    color: ${(props) => props.theme.colors.Gray2};
+    @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 14px;
     }
   }
@@ -100,12 +106,12 @@ export const TopBanner = styled.div`
     width: 229px;
     height: 56px;
     border-radius: 4px;
-    background-color: var(--lightBlue);
+    background-color: ${(props) => props.theme.colors.skyBlue};
     font-size: 20px;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: ${Breakpoints.md}){
       width: 215px;
     }
-    @media screen and (max-width: 376px){
+    @media screen and (max-width: ${Breakpoints.sm}){
       width: 169px;
       font-size: 16px;
     }
@@ -117,27 +123,27 @@ export const PricingCard = styled.div`
   overflow: hidden;
   position: relative;
   direction: rtl;
-  border: 1.5px solid #e0e0e0;
+  border: 1.5px solid ${(props) => props.theme.colors.Gray7};
   border-radius: 16px;
 
   .header {
     display: flex;
     align-items: center;
-    color: var(--darkBlue);
+    color: ${(props) => props.theme.customColors.dark};
   }
   .card-price{
     font-size: 38px;
     line-height: 48px;
-    color: #37474F;
+    color: ${(props) => props.theme.customColors.dark};
     font-weight: 700;
-    @media screen and (max-width: 376px){
+    @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 34px;
     }
   }
   .duration-pay {
     font-size: 22px;
     line-height: 24px;
-    color: #bdbdbd;
+    color: ${(props) => props.theme.colors.Gray6};
     margin-bottom: 9px;
   }
   .description {
@@ -145,7 +151,7 @@ export const PricingCard = styled.div`
     font-size: 19px;
     line-height: 25px;
     font-weight: 400;
-    color: #828282;
+    color: ${(props) => props.theme.colors.Gray1};
   }
 
  
@@ -156,7 +162,7 @@ export const Badge = styled.div`
 
   top: 21px;
   left: -1px;
-  background: #2cb87a;
+  background: ${(props) => props.theme.colors.Green};
   z-index: 10;
   font-size: 13px;
   font-weight: 600;

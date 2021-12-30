@@ -7,10 +7,11 @@ import {
   PricingCard,
   Badge,
 } from "./pricingPage.styles";
-import { Row, Col, Space, Typography, Button } from "antd";
+import { Row, Col, Space, Typography, Button, Image } from "antd";
 
 import TableIndexComponent from "./table/table.component";
 import TabePaneComponent from "./tabePane/tabe.component";
+import { PRICE_DATA } from "../../locales/ar/price";
 function useWindowResize(callback) {
   useEffect(() => {
     callback();
@@ -26,6 +27,7 @@ const { Title, Text } = Typography;
 const PricingPageComponent = () =>  {
  
   const [width, setWidth] = useState(true);
+  const [tablePreview, setTablePreview] = useState(true);
   const featureTableCallback = () => {
     if (window.innerWidth > 992) {
       setWidth(true);
@@ -51,7 +53,7 @@ const PricingPageComponent = () =>  {
             </Space>
           </Row_Container>
         </TopBanner>
-        <Row_Container>
+        <Row_Container style={{paddingBottom:'65px'}}>
           <Row
             gutter={[30, 30]}
             justify="center"
@@ -117,18 +119,21 @@ const PricingPageComponent = () =>  {
             </Col>
             
           </Row>
-          <Button type="ghost" className="btn-2">
-            {" "}
-            مقارنة خطط الأسعار ــــ
+          <Button type="ghost" onClick={()=> setTablePreview(!tablePreview)} className="btn-2">
+            {PRICE_DATA.comparepricing }{tablePreview? (<Image preview={false} alt="right" width={24} height={24} className="plus-minus" src="/static/minus.svg"/>)
+            :(<Image preview={false} alt="right" width={24} height={24} className="plus-minus" src="/static/plus.svg"/>)}
           </Button>
         </Row_Container>
 
         <Row_Container>
-          {width ? (
+          { tablePreview ?
+
+          (width ? (
             <TableIndexComponent />
           ) : (
             <TabePaneComponent/>
-          )}
+          )): null
+          }
         </Row_Container>
       </PricingPageContainer>
     );

@@ -6,8 +6,6 @@ const { Title, Text } = Typography;
 
 export const colHeadersNumbers=[0,17,31,43,47]
 
-const TypeTitle = { fontSize: "24px", color: "#1985A1", fontWeight:'600' , padding: "12px"};
-
 const sharedOnCell = (_, index) => {
   if (colHeadersNumbers.includes(index)) {
     return { colSpan: 0 };
@@ -23,7 +21,7 @@ export const columns = [
       {
         align: "right",
         className: "feature-Row",
-        title: <Title level={3}>مقارنة خطط الأسعار</Title>,
+        title: <Title level={3} className="main-tableHeader">مقارنة خطط الأسعار</Title>,
         dataIndex: "features",
         key: "features",
         width: "48%",
@@ -44,23 +42,14 @@ export const columns = [
         title: (
           <Typography style={{ textAlign: "right" }}>
             <Text
-              style={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "28px",
-              }}
+              className="table-type"
             >
               البرونزية
             </Text>
             <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
               <Title
                 level={4}
-                style={{
-                  fontWeight: "700",
-                  lineHeight: "28px",
-                  fontSize: "18px",
-                  color: "#37474F",
-                }}
+                className="price"
               >
                 249 جنيه
               </Title>
@@ -82,14 +71,7 @@ export const columns = [
     align: "center",
     className: "bestSeller-Row",
     title: (
-      <Text
-        style={{
-          fontSize: "13px",
-          fontWeight: "700",
-          color: "#fff",
-          backgroundColor: "#2CB87A",
-        }}
-      >
+      <Text className="bestSeller-description">
         الأكثر طلباً
       </Text>
     ),
@@ -99,16 +81,11 @@ export const columns = [
         className: "silver-Row",
         title: (
           <Typography style={{ textAlign: "right" }}>
-            <Text>الفضية</Text>
+            <Text className="table-type">الفضية</Text>
             <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
               <Title
                 level={4}
-                style={{
-                  fontWeight: "700",
-                  lineHeight: "28px",
-                  fontSize: "18px",
-                  color: "#37474F",
-                }}
+                className="price"
               >
                 499 جنيه
               </Title>
@@ -136,16 +113,11 @@ export const columns = [
         className: "gold-Row",
         title: (
           <Typography style={{ textAlign: "right" }}>
-            <Text>الذهبية</Text>
+            <Text className="table-type">الذهبية</Text>
             <p style={{ display: "flex", alignItems: "center", gap: "2px" }}>
               <Title
                 level={4}
-                style={{
-                  fontWeight: "700",
-                  lineHeight: "28px",
-                  fontSize: "18px",
-                  color: "#37474F",
-                }}
+                className="price"
               >
                 1299 جنيه
               </Title>
