@@ -38,6 +38,12 @@ padding: 75px 0px;
     
 }
 
+.ant-tabs-tab{
+    opacity: 0.75;
+}
+.ant-tabs-tab-active{
+    opacity: unset;
+}
 
 .ant-tabs-nav{
     position: sticky;
@@ -60,8 +66,8 @@ padding: 75px 0px;
 
     .inner-Table{
         text-align: start;
-        padding-left: 30px;
-        @media screen and (max-width: ${Breakpoints.md}){
+        width: 100%;
+        /* @media screen and (max-width: ${Breakpoints.md}){
             min-width: 735px;
         }
         @media screen and (max-width: 426px){
@@ -72,7 +78,7 @@ padding: 75px 0px;
         }
         @media screen and (max-width: 321px){
             min-width: 288px;
-        }
+        } */
 
         @media (max-width: 576px) {
     .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {

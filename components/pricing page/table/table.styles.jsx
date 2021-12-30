@@ -22,7 +22,6 @@ padding-bottom: 160px;
   }
 }
 
-
 .silver-Row {
   border-right: 1px solid ${(props) => props.theme.colors.Green};
   background-color: ${(props) => props.theme.customColors.white};
@@ -43,6 +42,9 @@ padding-bottom: 160px;
 .init-Row{
   background-color: ${(props) => props.theme.customColors.white};
   border-bottom: 1px solid ${(props) => props.theme.colors.Gray8};
+  ::before{
+    display: none;
+  }
 }
 
 .table-section {

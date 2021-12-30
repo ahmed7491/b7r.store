@@ -119,7 +119,7 @@ const PricingPageComponent = () =>  {
             </Col>
             
           </Row>
-          <Button type="ghost" onClick={()=> setTablePreview(!tablePreview)} className="btn-2">
+          <Button type="text" onClick={()=> setTablePreview(!tablePreview)} className="btn-2">
             {PRICE_DATA.comparepricing }{tablePreview? (<Image preview={false} alt="right" width={24} height={24} className="plus-minus" src="/static/minus.svg"/>)
             :(<Image preview={false} alt="right" width={24} height={24} className="plus-minus" src="/static/plus.svg"/>)}
           </Button>

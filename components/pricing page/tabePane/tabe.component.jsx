@@ -35,7 +35,7 @@ const TabePaneComponent = () => {
             <Row align="middle">
               <Space size={20} direction="vertical" className="inner-Table">
                 {newData.map((index,i) => (
-                  <Space key={index.key} style={colHeadersNumbers.includes(i)&& {backgroundColor:"#E1F5FA",width:"100%",padding:"15px 0px"}} size={15} direction="horizontal">
+                  <Space key={index.key} style={colHeadersNumbers.includes(i)&& {backgroundColor:"#E1F5FA",width:"100%",padding:"12px 0px"}} size={15} direction="horizontal">
                     <Col>
                       { index.advancedTab || index.advanced}
                     </Col>

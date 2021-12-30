@@ -7,10 +7,12 @@ export const PricingPageContainer = styled.div`
   text-align: center;
   .btn-2 {
     color: ${(props) => props.theme.colors.skyBlue};
+    background-color: ${(props) => props.theme.customColors.white};
     border: none;
     align-items: center;
     font-size: 18px;
     font-weight: 700;
+    box-shadow: none;
     .plus-minus{
       margin: 8px;
     }
@@ -31,14 +33,16 @@ export const PricingPageContainer = styled.div`
     color: ${(props) => props.theme.customColors.primary};
     font-weight: 400;
     line-height: 24px;
-    padding-right: 12px;
+    
     @media screen and (max-width: ${Breakpoints.sm}){
       font-size: 16px;
-      padding-right: 15px;
+      
     }
-    @media screen and (max-width: ${Breakpoints.xs}){
-      padding-right: 9px;
-      margin-left: 5px;
+    @media screen and (max-width: ${Breakpoints.md}){
+      display: block;
+      width: 24px;
+      text-align: center;
+      
     }
 
   }

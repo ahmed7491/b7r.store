@@ -4,7 +4,7 @@ const { Title, Text } = Typography;
 
 export const TabsName = {
     advanced: (
-        <Typography style={{ textAlign: "right" }}>
+        <Typography style={{ textAlign: "right"}}>
           <Text className="tabName-type">
             البرونزية
           </Text>
@@ -19,7 +19,7 @@ export const TabsName = {
         </Typography>
     ),
     silver: (
-        <Typography style={{ textAlign: "right" }}>
+        <Typography style={{ textAlign: "right"}}>
               <Text className="tabName-type">الفضية</Text>
               <p className="tabName-description">
                 <Title level={4} className="price">
@@ -32,7 +32,7 @@ export const TabsName = {
             </Typography>
     ),
     gold: (
-        <Typography style={{ textAlign: "right" }}>
+        <Typography style={{ textAlign: "right"}}>
               <Text className="tabName-type">الذهبية</Text>
               <p className="tabName-description">
                 <Title level={4} className="price">
